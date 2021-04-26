@@ -29,11 +29,9 @@ $(document).ready(function () {
 });
 
 function getPageLocation(){
-
     let str = window.location.pathname;
     let res = str.split("/");
     let item = (res[2]).split(".");
-    console.log(item[0]);
     return item[0];
 }
 
@@ -120,10 +118,3 @@ function ajaxPost(data, functionName){
         success: functionName
     });
 }
-
-
-
-
-
-
-

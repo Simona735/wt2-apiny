@@ -66,6 +66,9 @@ function getWeatherData(){
 }
 
 function addSubpageCountByName($page){
+    if(empty($page)){
+        $page="index";
+    }
     global $conn;
     $conn->query("INSERT INTO `subpages_visit`(`title`) VALUES ('".$page."')");
     insertVisit();
